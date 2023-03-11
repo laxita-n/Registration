@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CONFIRMATION</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div class="container1">
+		<h2>YOUR DETAILS</h2>
+		<ul>
+			<li>First Name: <span id="fname"></span></li>
+			<li>Last Name: <span id="lname"></span></li>
+            <li>College name: <span id="cname"></span></li>
+			<li>Email: <span id="email"></span></li>
+			<li>Phone Number: <span id="phnum"></span></li>
+			<li>Event: <span id="event"></span></li>
+		</ul>
+	</div>
+
+	<!-- Bootstrap JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<!-- JavaScript -->
+	<script>
+		var fname = localStorage.getItem("fname");
+		var lname = localStorage.getItem("lname");
+        var cname = localStorage.getItem("cname");
+		var email = localStorage.getItem("email");
+		var phnum = localStorage.getItem("phnum");
+		var event = localStorage.getItem("event");
+        document.getElementById("fname").innerHTML = fname;
+        document.getElementById("lname").innerHTML = lname;
+        document.getElementById("cname").innerHTML = cname;
+        document.getElementById("email").innerHTML = email;
+        document.getElementById("phnum").innerHTML = phnum;
+        document.getElementById("event").innerHTML = event;
+
+	// Clear localStorage
+	localStorage.clear();
+</script>
+</body>
+</html>

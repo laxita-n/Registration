@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Submission</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	
+		
+<div class="title">
+                    <h1> GOA UNIVERSITY</h1>
+                    <h4>Taleigao, Goa 403206</h4>
+                </div>
+			<section class="vh-100 gradient-custom">
+                
+                
+				<div class="container py-5 h-100">
+				  <div class="row justify-content-center align-items-center h-100">
+					<div class="col-12 col-lg-9 col-xl-7">
+					  <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+						<div class="card-body p-4 p-md-5">
+                           
+						  <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">INFOFEST REGISTRATIONS</h3>
+						  
+							<form id ="myForm" onsubmit="return handleSubmit()">
+
+			  
+							<div class="row">
+							  <div class="col-md-6 mb-4">
+			  
+								<div class="form-outline">
+								  <input type="text" id="fname" class="form-control form-control-lg" />
+								  <label class="form-label" for="firstName">First Name</label>
+								</div>
+			  
+							  </div>
+							  <div class="col-md-6 mb-4">
+			  
+								<div class="form-outline">
+								  <input type="text" id="lname" class="form-control form-control-lg" />
+								  <label class="form-label" for="lastName">Last Name</label>
+								</div>
+			  
+							  </div>
+							</div>
+			  
+							<div class="row">
+							  <div class="col-md-6 mb-4 d-flex align-items-center">
+			  
+								<div class="form-outline ">
+								  <input type="text" class="form-control form-control-lg" id="cname" />
+								  <label for="College name" class="form-label">College Name</label>
+								</div>
+			  
+							  </div>
+							
+							</div>
+			  
+							<div class="row">
+							  <div class="col-md-6 mb-4 pb-2">
+			  
+								<div class="form-outline">
+								  <input type="email" id="email" class="form-control form-control-lg" />
+								  <label class="form-label" for="emailAddress">Email</label>
+								</div>
+			  
+							  </div>
+							  <div class="col-md-6 mb-4 pb-2">
+			  
+								<div class="form-outline">
+								  <input type="tel" id="phnum" class="form-control form-control-lg" />
+								  <label class="form-label" for="phoneNumber">Phone Number</label>
+								</div>
+			  
+							  </div>
+							</div>
+			  
+							<div class="row">
+							  <div class="col-12">
+			  
+								<select id="event" class="select form-control-lg">
+								  <option value="1" disabled>Choose Events</option>
+                                    
+								  <option value="2">Choose Events</option>
+								  <option value="Blind Coding">Blind Coding</option>
+								  <option value="UI/UX">UI/UX</option>
+                                  <option value="Treasure Hunt">Treasure Hunt</option>
+								</select>
+								
+			  
+							  </div>
+							</div>
+			  
+							<div class="mt-4 pt-2">
+							  <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+							</div>
+			  
+						  </form>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </section>
+		
+		</form>
+	</div>
+
+	<!-- Bootstrap JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<!-- JavaScript -->
+	<script>
+    function handleSubmit()
+        {
+            var fname=document.getElementById("fname").value;
+            var lname=document.getElementById("lname").value;
+           var cname=document.getElementById("cname").value;
+            var email=document.getElementById("email").value;
+            var phnum=document.getElementById("phnum").value;
+          var event=document.getElementById("event").value;
+            
+            localStorage.setItem("fname", fname);
+            localStorage.setItem("lname", lname);
+            localStorage.setItem("cname", cname);
+            localStorage.setItem("email", email);
+            localStorage.setItem("phnum", phnum);
+            localStorage.setItem("event", event);
+
+            window.location.href = "DataDisplay.html";
+            return false;
+        }
+    </script>
+</body>
+</html>
